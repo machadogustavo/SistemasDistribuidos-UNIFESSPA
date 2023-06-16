@@ -29,7 +29,6 @@ O cliente envia ao servidor, **vários datagramas** contendo cada um uma respost
 ```
 1;5;VVFFV 
 2;4;VVVV
-
 ```
 
 O servidor lê a **mensagem** e calcula o número de acertos e erros devolvendo uma resposta
@@ -45,7 +44,6 @@ objeto compartilhado por todas as threads de atendimento aos clientes.
 Estatística
 Questão 1: acertos=5 erros=3
 Questão 2: acertos=4 erros=4
-
 ```
 
 ### TCP
@@ -55,9 +53,11 @@ questionário, no seguinte formato:
 
 `<número da questão>;<número alternativas>;<respostas>`
 
+**Exemplo:**
+
 ```
-1;5;VVFFV
-▪ 2;4;VVVV
+1;5;VVFFV 
+2;4;VVVV
 ```
 
 O servidor lê o **arquivo** e calcula o número de acertos e erros devolvendo uma resposta simples:
