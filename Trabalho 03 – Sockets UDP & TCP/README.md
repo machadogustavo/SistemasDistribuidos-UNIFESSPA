@@ -45,6 +45,7 @@ Estatística
 Questão 1: acertos=5 erros=3
 Questão 2: acertos=4 erros=4
 ```
+![UDP Schema](./SistemasDistruibuidos-SocketsUDP.png)
 
 ### TCP
 
@@ -73,3 +74,5 @@ Estatística
 Questão 1: acertos=5 erros=3
 Questão 2: acertos=4 erros=4
 ```
+
+![TCP Schema](./SistemasDistruibuidos-SocketsTCP.png)
