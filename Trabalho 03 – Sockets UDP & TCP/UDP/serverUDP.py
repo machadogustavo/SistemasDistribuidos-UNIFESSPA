@@ -1,7 +1,7 @@
 from socket import *
 from threading import Thread, Lock
 
-serverPort = 12000
+serverPort = 10000
 serverSocket = socket(AF_INET, SOCK_DGRAM)
 serverSocket.bind(('', serverPort))
 print("Server ready")
@@ -22,7 +22,7 @@ def print_statistics():
 
 def process_message(message, clientAddress):
   global counter
-  questionNumber, numberOfOptions, answers = message.split(';')
+  questionNumber, numberOfOptions, answers = message.split(';') #separação mensagem recebida
 
   correct_answer = answer_key.get(questionNumber, "")
   correct = sum(1 for a, b in zip(answers, correct_answer) if a == b)
@@ -43,12 +43,12 @@ def process_message(message, clientAddress):
       print_statistics()
       counter = 0
 
-  response = f"{questionNumber};{int(correct)};{int(incorrect)}"
+  response = f"{questionNumber};{int(correct)};{int(incorrect)}" #retorno servidor
   serverSocket.sendto(response.encode('utf-8'), clientAddress)
 
 
 while True:
-  message, clientAddress = serverSocket.recvfrom(2048)
+  message, clientAddress = serverSocket.recvfrom(2048) #maximo
   message = message.decode('utf-8')
 
   Thread(target=process_message, args=(message, clientAddress)).start()

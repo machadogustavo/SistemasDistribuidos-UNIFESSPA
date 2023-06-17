@@ -2,7 +2,7 @@
 from socket import *
 
 serverName = 'localhost'
-serverPort = 12000
+serverPort = 15000
 
 with open('responses.txt', 'r') as file:
     lines = file.readlines()
