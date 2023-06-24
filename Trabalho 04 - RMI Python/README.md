@@ -8,6 +8,8 @@
 
 ## Trabalho – RMI Python
 
+![Interface RMI](./Interface.png)
+
 ![](https://img.shields.io/badge/Python-3776AB.svg?style=for-the-badge&logo=Python&logoColor=white) 
 
 *Aplicação de transferência de arquivos em uma arquitetura cliente-servidor.*
